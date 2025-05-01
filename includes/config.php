@@ -1,4 +1,7 @@
 <?php
+define('SESSION_MANAGER', true);
+require_once 'Sessions.php';
+
 $host = 'localhost';
 $dbname = 'blog_db';
 $username = 'root';

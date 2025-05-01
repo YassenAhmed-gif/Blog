@@ -1,6 +1,17 @@
 <?php
+define('SESSION_MANAGER', true); // أضف هذا السطر في البداية
 require_once '../../includes/config.php';
+require_once '../../includes/Sessions.php';
 require_once '../../controllers/userController.php';
+
+// تهيئة الكائنات
+global $session, $userController;
+$userController = new UserController(); // أضف هذا السطر
+
+// بدء الجلسة إذا لم تكن بدأت
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 // إذا كان المستخدم مسجل دخول بالفعل، نوجهه للصفحة الرئيسية
 if (isset($_SESSION['user_id'])) {

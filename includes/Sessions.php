@@ -133,7 +133,7 @@ class SessionManager {
 }
 
 // تعريف ثابت للتحقق من الوصول الآمن
-define('SESSION_MANAGER', true);
+// define('SESSION_MANAGER', true);
 
 // إنشاء كائن الجلسات للاستخدام العام
 $session = new SessionManager();
