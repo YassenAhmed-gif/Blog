@@ -262,7 +262,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_post'])) {
                         <h3 class="h4">لا توجد منشورات بعد</h3>
                         <p class="mb-4">كن أول من ينشر محتوى مثيرًا للاهتمام!</p>
                         <?php if ($session->isLoggedIn()): ?>
-                            <a href="posts/create.php" class="btn btn-primary px-4">
+                            <a href="../Screens/post/createPost.php" class="btn btn-primary px-4">
                                 <i class="fas fa-plus me-2"></i> إنشاء أول منشور
                             </a>
                         <?php else: ?>
@@ -278,8 +278,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_post'])) {
 
     <!-- زر إنشاء بوست جديد (للأجهزة المحمولة) -->
     <?php if ($session->isLoggedIn()): ?>
-        <a href="posts/createPost.php" class="btn btn-primary px-4">
-            <i class="fas fa-plus me-2"></i> إنشاء أول منشور
+        <a href="../Screens/post/createPost.php" class="btn btn-primary px-4">
+            <i class="fas fa-plus me-2"></i> إنشاء منشور
         </a>
     <?php endif; ?>
 
